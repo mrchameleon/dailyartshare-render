@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Art Challenge Topic Generator | DailyArtShare">
+  <meta name="author" content="ryan johnson">
+
+  <title>DailyArtShare</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- import the webpage's client-side javascript file -->
+  <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">DailyArtShare</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Drawing Prompt Generator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/community" target="_blank">Join the community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div>
+          <h2>Free Art Challenge Tools</h2>
+    </div>
+
+    <section>
+      <div class="container">
+
+          <form id="haikuform">
+            <label>Topic Generator</label>
+            <p>1121 adjectives, 2333 nouns, 2 million+ unique combinations</p>
+            <button class="btn btn-primary rounded-pill" type="submit" id="get-haiku">Dream something up for me</button>
+
+            <p><span style="font-size: 3em; color: orangered" class="haiku" id="haiku"></span></p>
+
+          </form>
+
+
+
+          <form id="topicform">
+            <label>
+              Simple Topic List Builder - Add Topic
+              <input id="topic" name="topic" type="text" maxlength="100" required placeholder="Art Topics!">
+            </label>
+            <button class="btn btn-primary rounded-pill" type="submit" id="submit-topic">Add Topic to Simple Bulleted List</button>
+          </form>
+
+          <ul id="topics">
+            <em>loading topics&hellip;</em>
+          </ul>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+    <section>
+      <div class="container">
+        <h2><a class="btn btn-primary btn-xl rounded-pill mt-5" href="/calendar" target="_blank">Try Calendar Mode for a screenshottable month of these</a></h2>
+      </div>
+    </section>
+
+
+    <hr>
+
+
+    <a href="/community" target="_blank"><button class="btn btn-primary btn-xl rounded-pill mt-5" type="submit">Join The Community</button></a></p>
+
+
+  </header>
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center footer-text">the proof is in the pudding</p>
+      <p class="m-0 text-center footer-text">stressed is desserts spelled backwards</p>
+      <p class="m-0 text-center footer-text">always trust your crazy ideas</p>
+      <hr/>
+      <p class="m-0 text-center text-white small">Made by Ryan @ <a href="http://crookedframe.art" target="_blank">Crooked Frame Art</a></p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+
+  $( document ).ready(function() {
+
+    $("#haiku").on('DOMSubtreeModified',function(){
+        $("#topic").val($(this).html());
+    });
+
+  });
+
+  </script>
+
+</body>
+
+</html>
